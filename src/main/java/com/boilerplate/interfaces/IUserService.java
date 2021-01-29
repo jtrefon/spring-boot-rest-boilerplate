@@ -11,7 +11,8 @@ import com.boilerplate.entities.User;
  */
 public interface IUserService {
 	List<User> findAll();
-	void save(User newUser);
+	User save(User newUser);
 	void delete(Long id);
 	User findOneById(Long id);
+	User findOneByUsernameAndPassword(String username, String password);
 }

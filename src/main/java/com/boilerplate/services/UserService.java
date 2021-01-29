@@ -2,6 +2,7 @@ package com.boilerplate.services;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import com.boilerplate.interfaces.IUserRepository;
@@ -16,12 +17,12 @@ public  class UserService implements IUserService {
 	
 	@Override
 	public List<User> findAll() {
-		return (List<User>) repository.findAll();
+		return repository.findAll();
 	}
 
 	@Override
-	public void save(User newUser) {
-		this.repository.save(newUser);
+	public User save(User newUser) {
+		return this.repository.save(newUser);
 	}
 
 	@Override
@@ -32,6 +33,11 @@ public  class UserService implements IUserService {
 	@Override
 	public User findOneById(Long id) {
 		return this.repository.findById(id).orElse(null);
+	}
+
+	public User findOneByUsernameAndPassword(String username, String password) {
+		Example<User> example = Example.of(new User(username, password));
+		return this.repository.findOne(example).orElse(null);
 	}
 
 }

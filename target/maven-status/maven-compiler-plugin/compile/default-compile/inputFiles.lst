@@ -1,0 +1,7 @@
+/Users/jacektrefon/Projects/other/workspace-spring-tool-suite-4-4.9.0.RELEASE/rest-spring-boilerplate/src/main/java/com/boilerplate/entities/User.java
+/Users/jacektrefon/Projects/other/workspace-spring-tool-suite-4-4.9.0.RELEASE/rest-spring-boilerplate/src/main/java/com/boilerplate/components/UserCommandLineRunner.java
+/Users/jacektrefon/Projects/other/workspace-spring-tool-suite-4-4.9.0.RELEASE/rest-spring-boilerplate/src/main/java/com/boilerplate/interfaces/IUserRepository.java
+/Users/jacektrefon/Projects/other/workspace-spring-tool-suite-4-4.9.0.RELEASE/rest-spring-boilerplate/src/main/java/com/boilerplate/RestServiceApplication.java
+/Users/jacektrefon/Projects/other/workspace-spring-tool-suite-4-4.9.0.RELEASE/rest-spring-boilerplate/src/main/java/com/boilerplate/services/UserService.java
+/Users/jacektrefon/Projects/other/workspace-spring-tool-suite-4-4.9.0.RELEASE/rest-spring-boilerplate/src/main/java/com/boilerplate/interfaces/IUserService.java
+/Users/jacektrefon/Projects/other/workspace-spring-tool-suite-4-4.9.0.RELEASE/rest-spring-boilerplate/src/main/java/com/boilerplate/controllers/UserController.java
