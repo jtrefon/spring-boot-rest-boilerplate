@@ -32,8 +32,8 @@ public final class UserController {
 	@GetMapping("/user/{id}")
 	ResponseEntity<User> getOneUser(@PathVariable Long id) {
 		User user = service.findOneById(id);
-		return (user.getId().intValue() > 0) ? ResponseEntity.status(HttpStatus.OK).body(user)
-				:  ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+		if (user instanceof User) return ResponseEntity.status(HttpStatus.OK).body(user);
+				return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
 	}
 	
 	@DeleteMapping("/user/{id}")
