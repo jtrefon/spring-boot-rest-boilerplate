@@ -15,4 +15,5 @@ public interface IUserService {
 	void delete(Long id);
 	User findOneById(Long id);
 	User findOneByUsernameAndPassword(String username, String password);
+	User findOneActiveByUsernameAndPassword(String username, String password);
 }

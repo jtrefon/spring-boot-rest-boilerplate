@@ -41,5 +41,13 @@ public final class UserController {
 		service.delete(id);
 		return ResponseEntity.status(HttpStatus.ACCEPTED).body(null);
 	}
+
+	@PutMapping("/user/{id}")
+	ResponseEntity<User> updateUser(@RequestBody User user, @PathVariable long id) {
+		User found = service.findOneById(id);
+		if(found == null) return ResponseEntity.notFound().build();
+		user.setId(found.getId());
+		return ResponseEntity.ok().body(service.save(user));
+	}
 	
 }
