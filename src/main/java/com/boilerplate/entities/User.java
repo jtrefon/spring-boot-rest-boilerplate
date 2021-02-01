@@ -24,6 +24,12 @@ private String username;
 private String password;
 private boolean active;
 
+	/**
+	 * @param id
+	 */
+	public void setId(Long id) {
+	this.id = id;
+}
 /**
  * @return user id
  */
@@ -66,4 +72,6 @@ public boolean isActive() {
 public void setActive(boolean active) {
 	this.active = active;
 }
+
+
 }
